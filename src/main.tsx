@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Navbar from './components/Navbar.tsx'
 import Home from './routes/Home.tsx'
+import About from './routes/About.tsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <h1>ABOUT</h1>
+        element: <About />
       }
     ]
   },
