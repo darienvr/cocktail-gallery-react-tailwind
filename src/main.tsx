@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Navbar from './components/Navbar.tsx'
 import Home from './routes/Home.tsx'
 import About from './routes/About.tsx'
+import SingleCocktail from './routes/SingleCocktail.tsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -19,8 +20,12 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/about",
+        path: "about",
         element: <About />
+      },
+      {
+        path: "cocktail/:id",
+        element: <SingleCocktail />
       }
     ]
   },

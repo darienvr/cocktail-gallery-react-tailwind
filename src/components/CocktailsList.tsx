@@ -10,7 +10,6 @@ const CocktailsList = () => {
         const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
         const data = await response.json()
         setCocktail(data.drinks)
-        console.log(data.drinks)
     }
 
     useEffect(()=>{

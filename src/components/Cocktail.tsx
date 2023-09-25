@@ -1,13 +1,18 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 
 interface Props {
+    idDrink: string;
     strDrink: string;
     strGlass: string;
     strAlcoholic: string;
     strDrinkThumb: string
 }
 
-const Cocktail = ({strDrinkThumb, strDrink, strGlass, strAlcoholic}: Props) => {
+const Cocktail = ({idDrink, strDrinkThumb, strDrink, strGlass, strAlcoholic}: Props) => {
+
+
+
+
   return (
     <div className=' w-full shadow-lg rounded-md'>
         <img className=' h-60 w-full object-cover rounded-t-md' src={strDrinkThumb} alt="" />
@@ -15,7 +20,9 @@ const Cocktail = ({strDrinkThumb, strDrink, strGlass, strAlcoholic}: Props) => {
             <h3 className=' font-bold text-3xl '>{strDrink}</h3>
             <h6 className=' text-2xl'>{strGlass}</h6>
             <p className=' text-md text-gray-500'>{strAlcoholic}</p>
-            <button className=' bg-green-600 py-1 px-4 text-white font-semibold rounded mt-2'>Details</button>
+            <Link to={`cocktail/${idDrink}`}>
+              <button className=' bg-green-600 py-1 px-4 text-white font-semibold rounded mt-2'>Details</button>
+            </Link>
         </div>
     </div>
   )

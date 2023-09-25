@@ -3,5 +3,7 @@ export interface CocktailAPIInfo {
     strDrink: string;
     strAlcoholic: string;
     strGlass: string;
-    strDrinkThumb: string
+    strDrinkThumb: string;
+    strCategory: string;
+    strInstructions: string;
 }
