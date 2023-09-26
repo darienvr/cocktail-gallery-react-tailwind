@@ -1,20 +1,11 @@
-import React, { useState, useEffect } from 'react'
 import Cocktail from './Cocktail'
 import type { CocktailAPIInfo } from '../types'
 
-const CocktailsList = () => {
+interface Props {
+    cocktail: CocktailAPIInfo[]
+}
 
-    const [cocktail, setCocktail] = useState<CocktailAPIInfo[]>([])
-
-    const fetchData = async() => {
-        const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
-        const data = await response.json()
-        setCocktail(data.drinks)
-    }
-
-    useEffect(()=>{
-        fetchData()
-    },[])
+const CocktailsList = ({cocktail}: Props) => {
 
   return (
     <div className=' my-20 grid grid-cols-3 gap-8 px-20'>

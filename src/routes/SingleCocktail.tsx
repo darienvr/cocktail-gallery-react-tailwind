@@ -12,7 +12,6 @@ const SingleCocktail = () => {
     const fetchSingleCocktail = async() => {
         const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
         const data = await response.json()
-        console.log(data.drinks[0])
         setCocktail(data.drinks[0])
     }
 

@@ -10,9 +10,6 @@ interface Props {
 
 const Cocktail = ({idDrink, strDrinkThumb, strDrink, strGlass, strAlcoholic}: Props) => {
 
-
-
-
   return (
     <div className=' w-full shadow-lg rounded-md'>
         <img className=' h-60 w-full object-cover rounded-t-md' src={strDrinkThumb} alt="" />
