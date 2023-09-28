@@ -2,11 +2,18 @@ import { useState, useEffect, useCallback } from 'react'
 import Input from '../components/Input'
 import CocktailsList from '../components/CocktailsList'
 import type { CocktailAPIInfo } from '../types'
+import { MdDarkMode } from 'react-icons/md'
+import { BsFillSunFill } from 'react-icons/bs'
 
 const Home = () => {
 
   const [cocktail, setCocktail] = useState<CocktailAPIInfo[]>([])
   const [input, setInput] = useState('')
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', darkMode);
+  }, [darkMode]);
 
   const fetchData = useCallback(async() => {
     try {
@@ -24,9 +31,16 @@ const Home = () => {
 
 
   return (
-    <div className=' mx-auto max-w-[1280px]'>
-        <Input onSearch={(searchValue)=>setInput(searchValue)}/>
-        <CocktailsList cocktail={cocktail}/>
+    <div className='dark:bg-gray-900 transition dark:text-white'>
+        <div className=' mx-auto max-w-[1280px]'>
+          <div className='flex justify-end pt-5'>
+            <button onClick={()=>setDarkMode(!darkMode)} className=' text-4xl'>
+              { !darkMode ? <MdDarkMode /> : <BsFillSunFill style={{ color: 'white' }} />}
+            </button>
+          </div>
+          <Input onSearch={(searchValue)=>setInput(searchValue)}/>
+          <CocktailsList cocktail={cocktail}/>
+      </div>
     </div>
   )
 }
