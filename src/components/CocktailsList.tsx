@@ -8,7 +8,7 @@ interface Props {
 const CocktailsList = ({cocktail}: Props) => {
 
   return (
-    <div className=' my-20 grid grid-cols-3 gap-8 px-20'>
+    <div className='py-20 grid grid-cols-3 gap-8 px-20 '>
         {
             cocktail.map((item)=>{
                 return(
