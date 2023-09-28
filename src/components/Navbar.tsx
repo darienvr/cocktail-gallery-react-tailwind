@@ -9,12 +9,12 @@ const Navbar = () => {
             <h1 className=" text-4xl font-bold flex-1">CocktailsDB</h1>
             <div className="text-right">
                 <ul className="flex gap-8">
-                    <li>
+                    <li className="hover:scale-110 transition-all">
                       <Link to="/">
                         Home
                       </Link>
                     </li>
-                    <li>
+                    <li className="hover:scale-110 transition-all">
                       <Link to="/about">
                         About
                       </Link>
