@@ -21,7 +21,9 @@ const SingleCocktail = () => {
 
 
     if(!cocktail){
-        return <h2 className='text-center'>Cargando...</h2>
+        return <div className='min-h-screen dark:bg-gray-900 dark:text-white'>
+                <h2 className='text-center text-5xl font-bold'>Cargando...</h2>
+               </div>
     }else{
         const {
             strDrinkThumb,
@@ -33,7 +35,8 @@ const SingleCocktail = () => {
         } = cocktail;
 
         return (
-        <article className=' max-w-[1280px] mx-auto px-10'>
+        <div className='dark:bg-gray-900 min-h-screen dark:text-white'>
+            <article className=' max-w-[1280px] mx-auto px-10'>
             <h1 className=' font-semibold text-4xl text-center py-10'>{strDrink}</h1>
             <div className='flex justify-center gap-10'>
                 <img className=' w-96 rounded-md' src={strDrinkThumb} alt="" />
@@ -50,6 +53,7 @@ const SingleCocktail = () => {
                 Back Home
             </Link>
         </article>
+        </div>
         )
     }
 }

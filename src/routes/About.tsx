@@ -1,8 +1,8 @@
-import React from 'react'
 
 const About = () => {
   return (
-    <section className='grid grid-cols-2 mt-20 mx-auto w-[1100px]'>
+    <div className=' dark:bg-gray-900 dark:text-white min-h-screen '>
+      <section className='grid grid-cols-2 pt-20 mx-auto w-[1100px]'>
         <div className=' w-[80%] h-[400px] mx-auto'>
             <img className=' min-h-full object-cover rounded' src="https://tiendaparatodos.com/wp-content/uploads/2022/08/coctel.jpeg" alt="Tienda de Cócteles" />
         </div>
@@ -15,6 +15,7 @@ const About = () => {
             </p>
         </div>
     </section>
+    </div>
   )
 }
 
