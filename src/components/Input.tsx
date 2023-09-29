@@ -1,22 +1,20 @@
-import {useState} from 'react'
+import { useContext } from 'react'
+import { AppContext } from '../context'
+import { ContextType } from '../types'
 
-interface Props {
-  onSearch: (e:string)=>void
-}
+const Input = () => {
 
-const Input = ({onSearch}:Props) => {
+  const { input, setInput, handleSearch} = useContext(AppContext) as ContextType
 
-  const [textInput, SetTextInput] = useState('')
-
-  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    onSearch(textInput);
-  }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    handleSearch(); 
+  };
 
   return (
-    <div className='p-8 mt-28 w-3/6 rounded shadow-lg mx-auto'>
+    <div className='p-8 mt-28 w-3/6 rounded shadow-lg mx-auto dark:bg-gray-800'>
         <form action="" className=' max-w-fit flex' onSubmit={handleSubmit}>
-            <input value={textInput} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>SetTextInput(e.target.value)} type="text" className=' bg-slate-100 w-96 rounded border-gray-200 border pl-1' />
+            <input value={input} onChange={(e:React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value)} type="text" className=' bg-slate-100 w-96 rounded border-gray-200 border pl-1' />
             <button className=' bg-green-400 rounded px-4 py-1 text-white'>Search</button>
         </form>
     </div>

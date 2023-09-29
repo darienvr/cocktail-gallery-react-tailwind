@@ -9,30 +9,42 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { AppProvider } from './context.tsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Navbar />,
-    children: [
-      {
-        path: "/",
-        element: <Home />
-      },
-      {
-        path: "about",
-        element: <About />
-      },
-      {
-        path: "cocktail/:id",
-        element: <SingleCocktail />
-      }
-    ]
+    path: '/',
+    element: (
+      <>
+        <Navbar />
+        <Home />
+      </>
+    ),
+  },
+  {
+    path: '/about',
+    element: (
+      <>
+        <Navbar />
+        <About />
+      </>
+    ),
+  },
+  {
+    path: '/cocktail/:id',
+    element: (
+      <>
+        <Navbar />
+        <SingleCocktail />
+      </>
+    ),
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <AppProvider>
     <RouterProvider router={router} />
+    </AppProvider>
   </React.StrictMode>,
 )

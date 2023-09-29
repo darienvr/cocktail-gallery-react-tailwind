@@ -1,11 +1,11 @@
+import { useContext } from 'react'
+import { AppContext } from '../context'
 import Cocktail from './Cocktail'
-import type { CocktailAPIInfo } from '../types'
+import { ContextType } from '../types'
 
-interface Props {
-    cocktail: CocktailAPIInfo[]
-}
-
-const CocktailsList = ({cocktail}: Props) => {
+const CocktailsList = () => {
+ 
+  const { cocktail } = useContext(AppContext) as ContextType
 
   return (
     <div className='py-20 grid grid-cols-3 gap-8 px-20 '>
