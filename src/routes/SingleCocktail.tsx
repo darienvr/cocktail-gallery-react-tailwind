@@ -22,7 +22,7 @@ const SingleCocktail = () => {
 
     if(!cocktail){
         return <div className='min-h-screen dark:bg-gray-900 dark:text-white'>
-                <h2 className='text-center text-5xl font-bold'>Cargando...</h2>
+                    <h2 className='text-center text-5xl font-bold pt-5'>Cargando...</h2>
                </div>
     }else{
         const {
