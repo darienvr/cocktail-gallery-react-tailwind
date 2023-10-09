@@ -12,7 +12,7 @@ const Input = () => {
   };
 
   return (
-    <div className='p-8 w-5/12 rounded shadow-lg mx-auto dark:bg-gray-800'>
+    <div className='p-8 lg:w-5/12 rounded shadow-lg mx-auto dark:bg-gray-800 w-9/12 '>
         <form action="" className='flex' onSubmit={handleSubmit}>
             <input 
               value={input}

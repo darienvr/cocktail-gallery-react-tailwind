@@ -14,7 +14,7 @@ const CocktailsList = () => {
   }
 
   return (
-    <div className='py-20 grid grid-cols-3 gap-8 px-20 '>
+    <div className='py-20 grid gap-8 px-20 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'>
         {
             cocktail.map((item)=>{
                 return(
