@@ -35,12 +35,12 @@ const SingleCocktail = () => {
         } = cocktail;
 
         return (
-        <div className='dark:bg-gray-900 min-h-screen dark:text-white'>
-            <article className=' max-w-[1280px] mx-auto px-10'>
+        <div className='dark:bg-gray-900 min-h-screen dark:text-white pb-5'>
+            <article className=' max-w-[1280px] mx-auto px-10 py-3'>
             <h1 className=' font-semibold text-4xl text-center py-10'>{strDrink}</h1>
-            <div className='flex justify-center gap-10'>
-                <img className=' w-96 rounded-md' src={strDrinkThumb} alt="" />
-                <div className='font-semibold text-md py-10 px-3 w-6/12'>
+            <div className='flex-row md:flex justify-center gap-10 md:pb-5'>
+                <img className=' md:w-96 md:mx-0 rounded-md w-11/12 mx-auto' src={strDrinkThumb} alt="" />
+                <div className='font-semibold text-md py-5 md:px-3 md:w-6/12 md:mx-0 mx-auto w-11/12'>
                     <p className=' py-3'><span className=' text-green-900 font-bold bg-green-300 py-1 px-2 rounded-md mr-3'>Name:</span>{strDrink}</p>
                     <p className=' py-3'><span className=' text-green-900 font-bold bg-green-300 py-1 px-2 rounded-md mr-3'>Category:</span>{strCategory}</p>
                     <p className=' py-3'><span className=' text-green-900 font-bold bg-green-300 py-1 px-2 rounded-md mr-3'>Info:</span>{strAlcoholic}</p>
@@ -48,7 +48,7 @@ const SingleCocktail = () => {
                     <p className=' py-3'><span className=' text-green-900 font-bold bg-green-300 py-1 px-2 rounded-md mr-3'>Instructions:</span>{strInstructions}</p>
                 </div>
             </div>
-            <Link to='/' className=' bg-green-600 text-white px-2 py-1 rounded-md mx-auto flex mt-5 w-fit
+            <Link to='/' className='bg-green-600 text-white px-2 py-1 rounded-md mx-auto flex mt-5 w-fit
                  hover:bg-green-800 transition-colors'>
                 Back Home
             </Link>
