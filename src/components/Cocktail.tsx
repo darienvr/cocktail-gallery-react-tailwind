@@ -18,7 +18,7 @@ const Cocktail = ({idDrink, strDrinkThumb, strDrink, strGlass, strAlcoholic}: Pr
             <h6 className=' text-2xl'>{strGlass}</h6>
             <p className=' text-md text-gray-500'>{strAlcoholic}</p>
             <Link to={`cocktail/${idDrink}`}>
-              <button className=' bg-green-600 py-1 px-4 text-white font-semibold rounded mt-2'>Details</button>
+              <button className=' bg-green-600 py-1 px-4 text-white rounded mt-2 hover:bg-green-500 transition-all hover:font-semibold'>Details</button>
             </Link>
         </div>
     </div>
