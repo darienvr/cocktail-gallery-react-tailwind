@@ -15,7 +15,6 @@ const AppProvider = ({children}: Props) => {
         const storedDarkMode = localStorage.getItem('darkMode');
         return storedDarkMode === 'true';
     });
-    let searching = false;
 
     useEffect(() => {
         localStorage.setItem('darkMode', darkMode.toString());
@@ -45,7 +44,6 @@ const AppProvider = ({children}: Props) => {
 
     const handleSearch = () => {
         fetchData();
-        searching = true;
     }
 
     return(
