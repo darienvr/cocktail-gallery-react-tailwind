@@ -10,34 +10,30 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { AppProvider } from './context.tsx'
+import NotFound from './routes/NotFound.tsx'
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: (
-      <>
-        <Navbar />
-        <Home />
-      </>
-    ),
-  },
-  {
-    path: '/about',
-    element: (
-      <>
-        <Navbar />
-        <About />
-      </>
-    ),
-  },
-  {
-    path: '/cocktail/:id',
-    element: (
-      <>
-        <Navbar />
-        <SingleCocktail />
-      </>
-    ),
+    path: "/",
+    element: <Navbar />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/about",
+        element: <About />
+      },
+      {
+        path: '/cocktail/:id',
+        element: <SingleCocktail />
+      },
+      {
+        path: "*",
+        element: <NotFound />
+      },
+    ]
   },
 ]);
 

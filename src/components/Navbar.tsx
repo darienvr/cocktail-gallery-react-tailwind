@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { AppContext } from '../context'
 import { ContextType } from '../types'
 import { MdDarkMode } from 'react-icons/md'
@@ -35,7 +35,7 @@ const Navbar = () => {
             </div>
         </div>
       </nav>
-      
+      <Outlet />
     </>
   )
 }
